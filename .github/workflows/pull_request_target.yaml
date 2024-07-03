@@ -1,10 +1,10 @@
 name: CI_EXTERNAL
 on:
   pull_request_target:
-    types: [labeled]
+    types: [labeled, opened, synchronize]
 jobs:
   build:
-    if: github.event.pull_request.base.head.repo.full_name != 'brunoeduardodev/gh-actions-pull-request-target-playground' && github.event.label.name == 'run-ci'
+    if: (github.event.action == 'labeled' && github.event.pull_request.base.head.repo.full_name != 'brunoeduardodev/gh-actions-pull-request-target-playground' && github.event.label.name == 'run-ci') || (github.event.action != 'labeled' && github.event.pull_request.base.head.repo.full_name == 'brunoeduardodev/gh-actions-pull-request-target-playground')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
