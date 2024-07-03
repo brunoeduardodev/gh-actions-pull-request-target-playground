@@ -1,1 +1,1 @@
-console.log("Secret: ", process.env.SECRET);
+ console.log("Secret with updates!: ", process.env.SECRET);
