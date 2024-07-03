@@ -1,4 +1,4 @@
-name: CI
+name: CI_INTERNAL
 on:
   pull_request_target
 jobs:
