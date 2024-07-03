@@ -1,4 +1,4 @@
-name: CI
+name: CI_UPDATED
 on:
   pull_request_target:
     types: [labeled, opened, synchronize]
