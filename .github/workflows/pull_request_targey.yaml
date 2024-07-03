@@ -20,4 +20,4 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
       - run: echo "Secret is ${{ secrets.secret }}"
-      - run: SECRET=${{ secrets.secret }} pnpm run start
+      - run: SECRET='${{ secrets.secret }}' pnpm run start
